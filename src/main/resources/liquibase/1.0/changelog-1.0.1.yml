@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - changeSet:
+      id: Add status column to users table
+      author: Farid Mustafayev
+      changes:
+        - addColumn:
+            tableName: users
+            columns:
+              - column:
+                  name: status
+                  type: varchar(64)
+                  constraints:
+                    nullable: false
+
+            remarks: Adding status column to users table
